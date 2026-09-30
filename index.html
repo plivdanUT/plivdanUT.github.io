@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Philip Livdan | Finance PhD student, UT Austin</title>
+<meta name="description" content="Philip Livdan is a PhD student in finance at the McCombs School of Business, The University of Texas at Austin. Working papers on image-based return prediction and the financing of capital that becomes obsolete.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to main content</a>
+
+<div id="page">
+
+  <!-- masthead -->
+  <div id="masthead">
+    <a id="logo" href="./"><img src="images/logo.png" width="181" height="28" alt="Livdan"></a>
+    <p id="mast-links">
+      <a href="https://www.mccombs.utexas.edu/">McCombs School of Business</a>
+      <span class="bar">|</span>
+      <a href="https://www.utexas.edu/">The University of Texas at Austin</a>
+    </p>
+  </div>
+  <div id="tabs">
+    <a href="#about">Home</a>
+    <a href="#research">Research</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div id="columns">
+
+    <!-- left navigation -->
+    <div id="leftnav">
+      <h2>Philip Livdan</h2>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a>
+          <ul>
+            <li><a href="#bonds">Bond trades as images</a></li>
+            <li><a href="#images">Image-based returns</a></li>
+            <li><a href="#obsolescence">Financing obsolescence</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <h2 class="related">Related links</h2>
+      <ul class="plain">
+        <li><a class="arrow" href="https://www.mccombs.utexas.edu/">McCombs School of Business</a></li>
+        <li><a class="arrow" href="https://github.com/plivdanUT">GitHub</a></li>
+      </ul>
+    </div>
+
+    <!-- main content -->
+    <div id="content">
+
+      <div id="feature">
+        <div id="feature-text">
+          <h1>Philip Livdan</h1>
+          <p>PhD student in finance<br>McCombs School of Business<br>The University of Texas at Austin</p>
+        </div>
+        <div id="feature-tiles" aria-hidden="true">
+          <img src="images/tile-0.png" width="90" height="96" alt="">
+          <img src="images/tile-2.png" width="72" height="96" alt="">
+          <img src="images/tile-1.png" width="180" height="96" alt="">
+        </div>
+      </div>
+      <p class="feature-note">Pictured above: simulated corporate bond trades drawn in three image formats.</p>
+
+      <h2 class="band" id="about">About</h2>
+      <div class="section">
+        <div class="spotlight">
+          <img src="images/philip-livdan.jpg" width="180" height="187" alt="Philip Livdan">
+          <p><b>Philip Livdan</b><br><a href="mailto:plivdan@utexas.edu">plivdan@utexas.edu</a></p>
+        </div>
+        <p>I am a PhD student in finance at the McCombs School of Business, The University of Texas at Austin.</p>
+        <p>I study asset pricing with machine learning and the financing of capital that becomes obsolete quickly. My current papers ask what a neural network reads from a picture of past prices and trades, and how lenders and suppliers share the risk that new equipment makes old equipment worth less.</p>
+        <ul class="links">
+          <li><a class="arrow" href="#research">Working papers</a></li>
+          <li><a class="arrow" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <h2 class="band" id="research">Research</h2>
+
+      <div class="section paper" id="bonds">
+        <h3>Image Encodings of Corporate Bond Trades</h3>
+        <p class="meta">with Donal O'Cofaigh <span class="bar">|</span> Work in progress</p>
+        <p class="label">Abstract</p>
+        <p>A stock has a standard picture, the daily price chart. A corporate bond does not. Many bonds go days without a trade, small trades print far from large trades on the same day, and the tape records which side the customer took. We draw the same 60-day window of TRACE trades in several formats and train one convolutional network on each format to predict the bond's return over Treasuries in the next month. In about 3,000 bonds from 2002 to 2025, formats that show only prices and volume, including the bar chart used for stocks, do not predict returns out of sample. A format that shows the time between trades does. Its decile long-short portfolio earns 0.23 percent a month from 2011 to 2025 (t&nbsp;=&nbsp;3.6). Simple counts of how often a bond trades account for that return, so the image so far adds nothing to them.</p>
+
+        <div class="figure">
+          <a href="images/bond-real-windows-large.png"><img src="images/bond-real-windows.png" width="590" height="443" alt="Four bonds, each drawn as raw trades and in four image formats"></a>
+          <p class="caption"><b>Figure 1.</b> Four 60-day windows of TRACE trades. The first column plots every trade. The other columns draw the same window as the bar chart of Jiang, Kelly and Xiu, as trades binned by price and day, as trade size against distance from the daily price, and as the time since the previous trade. Green marks customer buys, red customer sells, and blue interdealer trades.</p>
+          <p><a class="arrow" href="images/bond-real-windows-large.png">View larger image</a></p>
+        </div>
+
+        <div class="figure">
+          <a href="images/bond-formats-simulated-large.png"><img src="images/bond-formats-simulated.png" width="590" height="370" alt="Nine image formats on seven simulated bonds"></a>
+          <p class="caption"><b>Figure 2.</b> Nine image formats, in columns, on seven simulated bonds, in rows. From left to right the columns are trades binned by price and day, the stock bar chart, the daily price alone, trade size against markup, days since the previous trade, the issuer's bonds by maturity, peer bonds by duration and spread, a Gramian angular field, and a recurrence plot. The formats were designed on simulated trades before any were run on TRACE.</p>
+          <p><a class="arrow" href="images/bond-formats-simulated-large.png">View larger image</a></p>
+        </div>
+      </div>
+
+      <div class="section paper" id="images">
+        <h3>What Explains Image-Based Returns?</h3>
+        <p class="meta">Work in progress</p>
+        <p class="label">Abstract</p>
+        <p>I train a variational autoencoder on 20-day price charts of US stocks from 1992 to 2025. The model sees only the images and never sees returns. A long-short portfolio formed on its 16 latent variables, with weights estimated through 2009, earns 7.2 percent a year equal-weighted out of sample from 2016 to 2025 (t&nbsp;=&nbsp;2.7). Its alpha against the Fama-French five factors, momentum, and short-term and long-term reversal is 7.7 percent (t&nbsp;=&nbsp;2.9). The value-weighted return is 2.2 percent (t&nbsp;=&nbsp;0.5). Eleven named chart statistics, such as the past 20-day return, the slope of the moving average, and price acceleration, account for the equal-weighted return. Once I remove the part of the signal they explain, the portfolio earns 1.2 percent (t&nbsp;=&nbsp;0.3).</p>
+
+        <div class="figure">
+          <a href="images/image-returns-cumret-large.png"><img src="images/image-returns-cumret.png" width="590" height="303" alt="Cumulative return of the chart-image long-short portfolios and the market, 1992 to 2025"></a>
+          <p class="caption"><b>Figure 3.</b> Cumulative return of the chart-image long-short portfolio, equal-weighted (dotted) and value-weighted (dashed), and of the CRSP value-weighted market (solid), on a log scale. Portfolio weights are estimated on 1992 to 2009. The vertical lines mark the start of the validation period in 2010 and of the test period in 2016.</p>
+          <p><a class="arrow" href="images/image-returns-cumret-large.png">View larger image</a></p>
+        </div>
+      </div>
+
+      <div class="section paper" id="obsolescence">
+        <h3>Financing Obsolescence: Vendor Guarantees as Commitment When the Supplier Controls Depreciation</h3>
+        <p class="meta">Work in progress</p>
+        <p>When a supplier releases a new product generation, the older equipment its customers pledged as collateral loses value, so lenders restrict financing in advance. A residual-value guarantee from the supplier insures lenders and also commits the supplier to slower releases, which outside insurance cannot do. The setting is the financing of data-center GPUs.</p>
+      </div>
+
+      <h2 class="band" id="contact">Contact</h2>
+      <div class="section">
+        <table class="contact">
+          <tr><th scope="row">E-mail</th><td><a href="mailto:plivdan@utexas.edu">plivdan@utexas.edu</a></td></tr>
+          <tr><th scope="row">Office</th><td>Department of Finance<br>McCombs School of Business<br>The University of Texas at Austin</td></tr>
+          <tr><th scope="row">Code</th><td><a href="https://github.com/plivdanUT">github.com/plivdanUT</a></td></tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div id="footer">
+    <p>
+      <a href="#about">About</a> <span class="bar">|</span>
+      <a href="#research">Research</a> <span class="bar">|</span>
+      <a href="#contact">Contact</a> <span class="bar">|</span>
+      <a href="#page">Top of page</a>
+    </p>
+    <p class="fine">Last updated September 2026</p>
+  </div>
+
+</div>
+</body>
+</html>
