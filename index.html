@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Philip Livdan | Finance PhD student, UT Austin</title>
-<meta name="description" content="Philip Livdan is a PhD student in finance at the McCombs School of Business, The University of Texas at Austin. Working papers on image-based return prediction and the financing of capital that becomes obsolete.">
+<meta name="description" content="Philip Livdan is a PhD student in finance at the McCombs School of Business, The University of Texas at Austin. Research on image-based return prediction and the financing of capital that becomes obsolete.">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -77,16 +77,17 @@
         <p>I am a PhD student in finance at the McCombs School of Business, The University of Texas at Austin.</p>
         <p>I study asset pricing with machine learning and the financing of capital that becomes obsolete quickly. My current papers ask what a neural network reads from a picture of past prices and trades, and how lenders and suppliers share the risk that new equipment makes old equipment worth less.</p>
         <ul class="links">
-          <li><a class="arrow" href="#research">Working papers</a></li>
+          <li><a class="arrow" href="#research">Research</a></li>
           <li><a class="arrow" href="#contact">Contact</a></li>
         </ul>
       </div>
 
       <h2 class="band" id="research">Research</h2>
+      <p class="subhead">Work in Progress</p>
 
       <div class="section paper" id="bonds">
         <h3>Image Encodings of Corporate Bond Trades</h3>
-        <p class="meta">with Donal O'Cofaigh <span class="bar">|</span> Work in progress</p>
+        <p class="meta">with Donal O'Cofaigh</p>
         <p class="label">Abstract</p>
         <p>Images of corporate bond trading predict bond returns only when they show the timing of trades, and simple measures of trading frequency subsume that predictability. Unlike a stock, a corporate bond has no standard chart: many bonds go days without trading, prices vary with trade size within a day, and the transaction record identifies the side the customer took. We render the same 60-day window of TRACE transactions in several image formats and train an identical convolutional neural network on each format to predict the bond's next-month return in excess of cash-flow-matched Treasuries. Across roughly 3,000 bonds from 2002 to 2025, formats that display only prices and volume, including the bar chart used for stocks, have no out-of-sample predictive power. A format that displays the time between trades earns a decile long-short return of 0.23 percent per month from 2011 to 2025 (<i>t</i>&nbsp;=&nbsp;3.6). Its predictive coefficient becomes insignificant (<i>t</i>&nbsp;=&nbsp;1.5) once we control for bond characteristics and counts of trading activity.</p>
 
@@ -105,7 +106,6 @@
 
       <div class="section paper" id="images">
         <h3>What Explains Image-Based Returns?</h3>
-        <p class="meta">Work in progress</p>
         <p class="label">Abstract</p>
         <p>The return predictability that an unsupervised model extracts from stock price charts is explained by a small set of standard price and volume variables. I train a variational autoencoder on 20-day price charts of U.S. stocks from 1992 to 2025. The model compresses each chart into sixteen latent variables and never observes returns. An equal-weighted long-short portfolio formed on these variables, with weights estimated through 2009, earns 7.2 percent per year out of sample from 2016 to 2025 (<i>t</i>&nbsp;=&nbsp;2.7), and its alpha relative to the Fama-French five factors, momentum, and short-term and long-term reversal is 7.7 percent (<i>t</i>&nbsp;=&nbsp;2.9). The value-weighted portfolio earns 2.2 percent (<i>t</i>&nbsp;=&nbsp;0.5). Eleven variables, among them the past 20-day return, the slope of the moving average, and price acceleration, span the predictive content of the image: the component of the signal orthogonal to them earns 1.2 percent per year (<i>t</i>&nbsp;=&nbsp;0.3).</p>
 
@@ -118,7 +118,6 @@
 
       <div class="section paper" id="obsolescence">
         <h3>Financing Obsolescence: Vendor Guarantees as Commitment When the Supplier Controls Depreciation</h3>
-        <p class="meta">Work in progress</p>
         <p>When a supplier releases a new product generation, the older equipment its customers pledged as collateral loses value, so lenders restrict financing in advance. A residual-value guarantee from the supplier insures lenders and also commits the supplier to slower releases, which outside insurance cannot do. The setting is the financing of data-center GPUs.</p>
       </div>
 
